@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Interactive rating component</title>
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body class="flex items-center justify-center h-screen bg-VeryDarkBlue ">
+
+  <main class="flex flex-col gap-5 p-5 bg-DarkBlue w-80 rounded-3xl">
+    <div class="flex items-center justify-center w-12 h-12 rounded-full bg-DarkBlueTwo"><img src="images/icon-star.svg" alt=""></div>
+    <h2 class="text-White">How did we do?</h2>
+    <p class="text-sm text-MediumGrey">Please let us know how we did with your support request. All feedback is appreciated 
+      to help us improve our offering!</p>
+    <section class="flex gap-4">
+      <div class="flex items-center justify-center w-12 h-12 text-white rounded-full bg-LightGrey hover:bg-orange-500 hover:text-white">
+        <input type="radio" id="star1" name="rating" value="1" class="hidden">
+        <label for="star1">1</label>
+      </div>
+      <div class="flex items-center justify-center w-12 h-12 rounded-full bg-DarkBlueTwo text-MediumGrey hover:bg-orange-500 hover:text-white">
+        <input type="radio" id="star2" name="rating" value="2" class="hidden">
+        <label for="star2">2</label>
+      </div>
+      <div class="flex items-center justify-center w-12 h-12 rounded-full bg-DarkBlueTwo text-MediumGrey hover:bg-orange-500 hover:text-white">
+        <input type="radio" id="star3" name="rating" value="3" class="hidden">
+        <label for="star3">3</label>
+      </div>
+      <div class="flex items-center justify-center w-12 h-12 rounded-full bg-DarkBlueTwo text-MediumGrey hover:bg-orange-500 hover:text-white">
+        <input type="radio" id="star4" name="rating" value="4" class="hidden">
+        <label for="star4">4</label>
+      </div>
+      <div class="flex items-center justify-center w-12 h-12 rounded-full bg-DarkBlueTwo text-MediumGrey hover:bg-orange-500 hover:text-white">
+        <input type="radio" id="star5" name="rating" value="5" class="hidden">
+        <label for="star5">5</label>
+      </div>
+    </section>
+    <div>
+      <button class="w-full py-2 text-center text-white bg-orange-500 rounded-3xl hover:bg-white hover:text-red-500">SUBMIT</button>
+    </div>
+
+  </main>
+
+
+  <main class="flex flex-col gap-5 p-5 bg-DarkBlue w-80 rounded-3xl">
+      <div class="self-center">
+        <img src="images/illustration-thank-you.svg" alt="">
+      </div>
+      <div class="self-center text-orange-400 rounded-3xl bg-DarkBlueTwo ">You selected Add rating here out of 5</div>
+      <h1 class="self-center">Thank you!</h1>
+      <p class="self-center text-center">
+        We appreciate you taking the time to give a rating. If you ever need more support, 
+        don’t hesitate to get in touch! 
+      </p>
+
+  </main>
+
+  <!-- Rating state start -->
+
+ 
+
+  
+<!-- 
+  
+
+   -->
+
+  <!-- Rating state end -->
+
+  <!-- Thank you state start -->
+
+  <!-- You selected Add rating here out of 5 -->
+
+  <!-- 
+
+ 
+
+  <!-- Thank you state end -->
+
+  
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+</body>
+</html>
