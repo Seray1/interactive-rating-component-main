@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" >
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | Interactive rating component</title>
   <link rel="stylesheet" href="css/style.css">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
   <script src="script.js" defer></script>
 
 </head>
-<body class="flex items-center justify-center h-screen bg-VeryDarkBlue ">
+<body class="flex items-center justify-center h-screen bg-VeryDarkBlue "> 
 
-  <main class="flex flex-col gap-5 p-5 bg-DarkBlue w-80 rounded-3xl">
+  <main id="front-card" class="flex flex-col gap-5 p-5 bg-DarkBlue w-80 rounded-3xl">
     <div class="flex items-center justify-center w-12 h-12 rounded-full bg-DarkBlueTwo"><img src="images/icon-star.svg" alt=""></div>
     <h2 class="text-White">How did we do?</h2>
     <p class="text-sm text-MediumGrey">Please let us know how we did with your support request. All feedback is appreciated 
@@ -21,23 +25,23 @@
     <section class="flex gap-4 stars">
       <div class="flex items-center justify-center w-12 h-12 text-white rounded-full bg-DarkBlueTwo hover:bg-orange-500 hover:text-white ">
         <input type="radio" id="star1" name="rating" value="1" class="hidden">
-        <label for="star1" class="flex items-center justify-center w-12 h-12">1</label>
+        <label for="star1" class="flex items-center justify-center w-12 h-12 rounded-full">1</label>
       </div>
       <div class="flex items-center justify-center w-12 h-12 rounded-full bg-DarkBlueTwo text-MediumGrey hover:bg-orange-500 hover:text-white ">
         <input type="radio" id="star2" name="rating" value="2" class="hidden">
-        <label for="star2" class="flex items-center justify-center w-12 h-12">2</label>
+        <label for="star2" class="flex items-center justify-center w-12 h-12 rounded-full">2</label>
       </div>
       <div class="flex items-center justify-center w-12 h-12 rounded-full bg-DarkBlueTwo text-MediumGrey hover:bg-orange-500 hover:text-white ">
         <input type="radio" id="star3" name="rating" value="3" class="hidden">
-        <label for="star3" class="flex items-center justify-center w-12 h-12">3</label>
+        <label for="star3" class="flex items-center justify-center w-12 h-12 rounded-full">3</label>
       </div>
       <div class="flex items-center justify-center w-12 h-12 rounded-full bg-DarkBlueTwo text-MediumGrey hover:bg-orange-500 hover:text-white ">
         <input type="radio" id="star4" name="rating" value="4" class="hidden">
-        <label for="star4" class="flex items-center justify-center w-12 h-12">4</label>
+        <label for="star4" class="flex items-center justify-center w-12 h-12 rounded-full">4</label>
       </div>
       <div class="flex items-center justify-center w-12 h-12 rounded-full bg-DarkBlueTwo text-MediumGrey hover:bg-orange-500 hover:text-white ">
         <input type="radio" id="star5" name="rating" value="5" class="hidden">
-        <label for="star5" class="flex items-center justify-center w-12 h-12">5</label>
+        <label for="star5" class="flex items-center justify-center w-12 h-12 rounded-full">5</label>
       </div>
     </section>
     <div>
@@ -47,11 +51,11 @@
   </main>
 
 
-  <main class="flex flex-col gap-5 p-5 bg-DarkBlue w-80 rounded-3xl ">
+  <main id="back-card" class=" flex-col gap-5 p-5 bg-DarkBlue w-80 rounded-3xl hidden animate__animated ">
       <div class="self-center">
         <img src="images/illustration-thank-you.svg" alt="">
       </div>
-      <div id="selected" class="self-center p-2 text-orange-400 rounded-3xl bg-DarkBlueTwo">You selected 4 here out of 5</div>
+      <div id="selected" class="self-center p-2 text-orange-400 rounded-3xl bg-DarkBlueTwo">You selected 0 here out of 5</div>
       <h1 class="self-center text-white">Thank you!</h1>
       <p class="self-center text-center text-MediumGrey">
         We appreciate you taking the time to give a rating. If you ever need more support, 
