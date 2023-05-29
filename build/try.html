@@ -5,85 +5,52 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        .rating-container {
-  text-align: center;
-  margin-top: 20px;
+   <style>
+    .rating-card {
+  display: flex;
 }
 
-.stars input {
-  display: none;
-}
-
-.stars label {
-  display: inline-block;
+.rating-number {
   cursor: pointer;
-  width: 30px;
-  height: 30px;
-  background-image: url('star.png');
-  background-size: cover;
+  margin: 5px;
+  font-size: 20px;
 }
 
-.stars label:hover,
-.stars label:focus {
-  background-image: url('star-filled.png');
+.rating-number.selected {
+  color: blue;
 }
 
-#submit-btn {
-  display: block;
-  margin: 20px auto;
-  padding: 10px 20px;
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-#thank-you-card {
-  display: none;
-  margin-top: 20px;
-  background-color: #f1f1f1;
-  padding: 20px;
-  border-radius: 4px;
-}
-
-    </style>
+   </style>
 </head>
 <body>
-    <div class="rating-container">
-        <h2>Rate your experience</h2>
-        <div class="stars">
-          <input type="radio" id="star5" name="rating" value="5">
-          <label for="star5"></label>
-          <input type="radio" id="star4" name="rating" value="4">
-          <label for="star4"></label>
-          <input type="radio" id="star3" name="rating" value="3">
-          <label for="star3"></label>
-          <input type="radio" id="star2" name="rating" value="2">
-          <label for="star2"></label>
-          <input type="radio" id="star1" name="rating" value="1">
-          <label for="star1"></label>
-        </div>
-        <button id="submit-btn">Submit</button>
-        <div id="thank-you-card">
-          <h2>Thank you!</h2>
-          <p>Your rating has been submitted.</p>
-        </div>
-      </div>
-      <script>
-        const stars = document.querySelectorAll('.stars input');
-const submitBtn = document.getElementById('submit-btn');
-const thankYouCard = document.getElementById('thank-you-card');
+  <div class="rating-card">
+    <span class="rating-number">1</span>
+    <span class="rating-number">2</span>
+    <span class="rating-number">3</span>
+    <span class="rating-number">4</span>
+    <span class="rating-number">5</span>
+  </div>
 
-submitBtn.addEventListener('click', () => {
-  const selectedRating = document.querySelector('.stars input:checked');
+  <script>
+   // Get all the rating number elements
+const ratingNumbers = document.querySelectorAll('.rating-number');
 
-  if (selectedRating) {
-    thankYouCard.style.display = 'block';
-  }
+// Add click event listeners to each rating number
+ratingNumbers.forEach((number, index) => {
+  number.addEventListener('click', () => {
+    // Remove the 'selected' class from all numbers
+    ratingNumbers.forEach((number) => {
+      number.classList.remove('selected');
+    });
+
+    // Add the 'selected' class to the clicked number and preceding numbers
+    for (let i = 0; i <= index; i++) {
+      ratingNumbers[i].classList.add('selected');
+    }
+  });
 });
 
-      </script>
+
+  </script>
 </body>
 </html>
