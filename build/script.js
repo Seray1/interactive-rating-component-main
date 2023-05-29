@@ -10,7 +10,7 @@ stars.forEach((number, index) => {
   number.addEventListener("click", () => {
     selectedRating = index + 1
     // Remove the 'selected' class from all numbers
-    console.log("clicked")
+
     stars.forEach((number) => {
       number.classList.remove("bg-orange-500")
     })
@@ -18,7 +18,6 @@ stars.forEach((number, index) => {
     // Add the 'selected' class to the clicked number and preceding numbers
     for (let i = 0; i <= index; i++) {
       stars[i].classList.add("bg-orange-500")
-      console.log("working")
     }
   })
 })
