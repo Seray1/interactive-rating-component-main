@@ -12,12 +12,12 @@ stars.forEach((number, index) => {
     // Remove the 'selected' class from all numbers
 
     stars.forEach((number) => {
-      number.classList.remove("bg-orange-500")
+      number.classList.remove("bg-LightGrey")
     })
 
     // Add the 'selected' class to the clicked number and preceding numbers
     for (let i = 0; i <= index; i++) {
-      stars[i].classList.add("bg-orange-500")
+      stars[i].classList.add("bg-LightGrey")
     }
   })
 })
